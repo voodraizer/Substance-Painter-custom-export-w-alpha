@@ -1,8 +1,8 @@
 import os
 
 import sys
-from PySide2 import QtWidgets, QtCore, QtGui
-from PySide2.QtCore import Qt
+from PySide6 import QtWidgets, QtCore, QtGui
+from PySide6.QtCore import Qt
 from pathlib import Path
 
 # import substance_painter.ui
@@ -406,16 +406,16 @@ def export_textures():
 def start_plugin():
 
 	# Menu.
-	Action = QtWidgets.QAction("Export textures with AO", triggered=export_textures)
+	Action = QtGui.QAction("Export textures with AO", triggered=export_textures)
 	plugin_widgets.append(Action)
 
-	Action3 = QtWidgets.QAction("Show settings window", triggered=show_texture_setting_window)
+	Action3 = QtGui.QAction("Show settings window", triggered=show_texture_setting_window)
 	plugin_widgets.append(Action3)
 
-	Action4 = QtWidgets.QAction("Dump metadata", triggered=dump_metadata)
+	Action4 = QtGui.QAction("Dump metadata", triggered=dump_metadata)
 	plugin_widgets.append(Action4)
 
-	Action5 = QtWidgets.QAction("Clear metadata", triggered=clear_metadata)
+	Action5 = QtGui.QAction("Clear metadata", triggered=clear_metadata)
 	plugin_widgets.append(Action5)
 
 
